@@ -21,7 +21,13 @@ const Handle = styled.div`
 export default class Task extends React.Component {
     render() {
         const rowStyle = {
-            lineHeight: '30px'
+            width: '100%',
+            lineHeight: '30px',
+            display: 'flex',
+            justifyContent: 'space-between'
+        };
+        const rowItemStyle = {
+            width: '25%'
         };
         return (
             <Draggable draggableId={this.props.task.id} index={this.props.index}>
@@ -32,7 +38,15 @@ export default class Task extends React.Component {
                         isDragging={snapshot.isDragging}
                     >
                         <Handle {...provided.dragHandleProps} />
-                        <div style={rowStyle}>{this.props.task.content}, {this.props.task.ceo}, {this.props.task.days} days, <a href="https://products.office.com/en-us/onedrive-for-business/online-cloud-storage" target="_blank">Material</a></div>
+                        <div style={rowStyle}>
+                            <div style={rowItemStyle}>{this.props.task.content}</div>
+                            <div style={rowItemStyle}>{this.props.task.ceo}</div>
+                            <div style={rowItemStyle}>{this.props.task.days}</div>
+                            <div style={rowItemStyle}>
+                                <a href="https://products.office.com/en-us/onedrive-for-business/online-cloud-storage" target="_blank">Material</a>
+                            </div>
+
+                        </div>
                     </Container>
                 )}
             </Draggable>

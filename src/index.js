@@ -24,7 +24,7 @@ class App extends React.Component {
     // }
 
     onDragEnd = result => {
-        document.body.style.color = 'inherit';
+        // document.body.style.color = 'inherit';
         // document.body.style.backgroundColor = 'inherit';
 
         const {destination, source, draggableId } = result;
