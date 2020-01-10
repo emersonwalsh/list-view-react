@@ -41,11 +41,10 @@ export default class Task extends React.Component {
                         <div style={rowStyle}>
                             <div style={rowItemStyle}>{this.props.task.content}</div>
                             <div style={rowItemStyle}>{this.props.task.ceo}</div>
-                            <div style={rowItemStyle}>{this.props.task.days}</div>
+                            <div style={rowItemStyle}>{this.props.task.days} days</div>
                             <div style={rowItemStyle}>
                                 <a href="https://products.office.com/en-us/onedrive-for-business/online-cloud-storage" target="_blank">Material</a>
                             </div>
-
                         </div>
                     </Container>
                 )}
