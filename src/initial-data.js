@@ -1,17 +1,15 @@
 const initialData = {
     tasks: {
-        'task-1': { id: 'task-1', content: 'AirBnB', ceo: 'Brian', days: 24 },
-        'task-2': { id: 'task-2', content: 'Stripe', ceo: 'Patrick', days: 16 },
-        'task-3': { id: 'task-3', content: 'SoFi', ceo: 'Anthony', days: 14 },
-        'task-4': { id: 'task-4', content: 'Palantir', ceo: 'Alex', days: 12 },
-        'task-5': { id: 'task-5', content: 'Compass', ceo: 'Robert', days: 3 },
-        'task-6': { id: 'task-6', content: 'Appnexus', ceo: 'Brian', days: 1 },
-        'task-7': { id: 'task-7', content: 'Box', ceo: 'Dylan', days: 8 },
-        'task-8': { id: 'task-8', content: 'DoorDash', ceo: 'Tony', days: 31 },
-        'task-9': { id: 'task-9', content: 'Houzz', ceo: 'Adi', days: 9 },
-        'task-10': { id: 'task-10', content: 'SnowFlake', ceo: 'Frank', days: 18 },
-
-
+        'task-1': { id: 'task-1', content: 'AirBnB', ceo: 'Brian', days: 24, owner: 'Spencer' },
+        'task-2': { id: 'task-2', content: 'Stripe', ceo: 'Patrick', days: 16, owner: 'John' },
+        'task-3': { id: 'task-3', content: 'SoFi', ceo: 'Anthony', days: 14, owner: 'Spencer' },
+        'task-4': { id: 'task-4', content: 'Palantir', ceo: 'Alex', days: 12, owner: 'Spencer' },
+        'task-5': { id: 'task-5', content: 'Compass', ceo: 'Robert', days: 3, owner: 'John' },
+        'task-6': { id: 'task-6', content: 'Appnexus', ceo: 'Brian', days: 1, owner: 'Spencer' },
+        'task-7': { id: 'task-7', content: 'Box', ceo: 'Dylan', days: 8, owner: 'John' },
+        'task-8': { id: 'task-8', content: 'DoorDash', ceo: 'Tony', days: 31, owner: 'Spencer' },
+        'task-9': { id: 'task-9', content: 'Houzz', ceo: 'Adi', days: 9, owner: 'Spencer'},
+        'task-10': { id: 'task-10', content: 'SnowFlake', ceo: 'Frank', days: 18 , owner: 'John'},
     },
     columns: {
         'column-1': {
@@ -26,12 +24,12 @@ const initialData = {
         },
         'column-3': {
             id: 'column-3',
-            title: 'Pass',
+            title: 'Portfolio',
             taskIds: [ 'task-10' ]
         },
         'column-4': {
             id: 'column-4',
-            title: 'Fail',
+            title: 'Pass',
             taskIds: [ 'task-5' ]
         },
     },
