@@ -4,8 +4,9 @@ import './index.css'
 import '@atlaskit/css-reset';
 import { DragDropContext } from 'react-beautiful-dnd';
 import initialData from './initial-data';
-import Topbar from './topbar.jsx';
-import Column from './column.jsx';
+import Topbar from './components/topbar.jsx';
+import ColumnHeader from './components/columnHeader.jsx';
+import Column from './components/column.jsx';
 
 class App extends React.Component {
     state = initialData;
@@ -67,8 +68,6 @@ class App extends React.Component {
             return;
         }
 
-
-
         // Movement across columns
         const startTaskIds = Array.from(start.taskIds);
         startTaskIds.splice(source.index, 1);
@@ -99,6 +98,14 @@ class App extends React.Component {
     }
 
     render() {
+        const rowStyle = {
+            position: 'absolute',
+            top: '50px',
+            left: '0',
+            width: '100%',
+            zIndex: '1'
+        };
+
         return (
             <DragDropContext 
                 onDragEnd={this.onDragEnd}
@@ -106,12 +113,16 @@ class App extends React.Component {
                 // onDragUpdate={this.onDragUpdate}
             >
                 <Topbar></Topbar>
-                {this.state.columnOrder.map(columnId => {
-                    const column = this.state.columns[columnId];
-                    const tasks = column.taskIds.map(taskId => this.state.tasks[taskId]);
+                {/* <ColumnHeader></ColumnHeader> */}
+                <div style={rowStyle}>
+                    {this.state.columnOrder.map(columnId => {
+                        const column = this.state.columns[columnId];
+                        const tasks = column.taskIds.map(taskId => this.state.tasks[taskId]);
 
-                    return <Column key={column.id} column={column} tasks={tasks} />
-                })}
+                        return <Column key={column.id} column={column} tasks={tasks} />
+                    })}
+                </div>
+                
             </DragDropContext>
         )
     }

@@ -9,18 +9,21 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
 `;
+
 const Title = styled.h3`
     padding: 8px;
-    background-color: white;
     color: #484850;
     font-size: 1.2em;
 `;
+
 const TaskList = styled.div`
-    padding: 8px;
-    background-color: ${props => (props.isDraggingOver ? '#d1d8e0' : 'white')};
+    padding: 8px 8px 0 8px;
     flex-grow: 1;
     min-height: 40px;
+    transition: background-color 0.1s ease 0s;
 `;
+// background-color: ${props => (props.isDraggingOver ? 'rgb(222, 235, 255)' : '#2684ff')};
+
 
 export default class Column extends React.Component {
     render() {
