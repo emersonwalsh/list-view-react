@@ -116,10 +116,8 @@ export default function NewDealButton() {
                             type="url"
                         />
                     </FormControl>
-
-
                     <FormControl className={classes.formControlHalf}>
-                        <InputLabel>Age</InputLabel>
+                        <InputLabel>Deal POC</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
@@ -129,9 +127,6 @@ export default function NewDealButton() {
                             <MenuItem value={2}>John</MenuItem>
                         </Select>
                     </FormControl>
-
-
-
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleCancel} color="primary" style={blueFontStyle}>
