@@ -8,7 +8,7 @@ import PriorityInput from './priorityInput.jsx';
 
 const Container = styled.div`
     border: ${props => (props.isDragging ? '1px solid #ecebeb' : '1px solid #ecebeb')};
-    border-radius: 1px;
+    border-radius: 4px;
     margin-bottom: 8px;
     background-color: ${props => (props.isDragging ? 'white' : 'white')};
     display: flex;
@@ -20,7 +20,7 @@ const Handle = styled.div`
     width: 40px;
     height: 40px;
     background-color: #2684ff;
-    border-radius: 1px;
+    border-radius: 4px 0 0 4px;
     margin-right: 8px;
 `;
 
