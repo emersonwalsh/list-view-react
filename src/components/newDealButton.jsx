@@ -29,6 +29,7 @@ const useStyles = makeStyles(theme => ({
 
 
 // todo make deal modal its own component (dealModal.jsx)
+// todo open the modal on Edit (pass in row info as props)
 
 
 export default function NewDealButton() {
