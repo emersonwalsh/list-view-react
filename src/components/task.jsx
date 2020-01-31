@@ -4,6 +4,7 @@ import { Draggable } from 'react-beautiful-dnd';
 import EditMenu from './editMenu.jsx';
 import NameAvatar from './nameAvatar.jsx';
 import PriorityInput from './priorityInput.jsx';
+import CEO from './ceo.jsx';
 // import NextStepsInput from './nextStepsInput.jsx';
 
 const Container = styled.div`
@@ -62,7 +63,7 @@ export default class Task extends React.Component {
                         <div style={rowStyle}>
                             <div style={rowItemStyle}>{this.props.task.content}</div>
                             <div style={rowItemStyle}>
-                                <a style={linkStyle} href="mailto:name@email.com">{this.props.task.ceo}</a>                            
+                                <CEO name={this.props.task.ceo} email={this.props.task.ceoEmail} />                           
                             </div>
                             <div style={rowItemStyle}>{this.props.task.days} days</div>
                             <div style={rowItemStyle}>
