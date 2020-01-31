@@ -101,8 +101,8 @@ class App extends React.Component {
         const rowStyle = {
             position: 'absolute',
             top: '50px',
-            left: '0',
-            width: '100%',
+            left: '25px',
+            right: '25px',
             zIndex: '1'
         };
 
