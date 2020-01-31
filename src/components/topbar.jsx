@@ -10,7 +10,7 @@ const Container = styled.div`
     width: 100%;
     background-color: white;
     z-index: 2;
-    box-shadow: 0px 0px 8px -0px #ecebeb;    
+    box-shadow: 0 3px 5px rgba(0,0,0,.09)    
 `;
 
 const Name = styled.div`

@@ -5,6 +5,7 @@ import EditMenu from './editMenu.jsx';
 import NameAvatar from './nameAvatar.jsx';
 import PriorityInput from './priorityInput.jsx';
 import CEO from './ceo.jsx';
+import LastContact from './lastContact.jsx';
 // import NextStepsInput from './nextStepsInput.jsx';
 
 const Container = styled.div`
@@ -65,19 +66,21 @@ export default class Task extends React.Component {
                             <div style={rowItemStyle}>
                                 <CEO name={this.props.task.ceo} email={this.props.task.ceoEmail} />                           
                             </div>
-                            <div style={rowItemStyle}>{this.props.task.days} days</div>
+                            <div style={rowItemStyle}>
+                                <LastContact lastContact={this.props.task.lastContact} />                            
+                            </div>
                             <div style={rowItemStyle}>
                                 <NameAvatar title={this.props.task.owner} name={this.props.task.owner} />
+                            </div>
+                            <div style={rowItemStyle}>
+                                <a style={linkStyle} href="https://products.office.com/en-us/onedrive-for-business/online-cloud-storage" target="_blank">Material</a>
                             </div>
                             <div style={rowItemStyle}>
                                 Next Steps
                                 {/* <NextStepsInput /> */}
                             </div>
                             <div style={rowItemStyle}>
-                                <PriorityInput priority={this.props.task.priority} />
-                            </div>
-                            <div style={rowItemStyle}>
-                                <a style={linkStyle} href="https://products.office.com/en-us/onedrive-for-business/online-cloud-storage" target="_blank">Material</a>
+                                <PriorityInput priority={this.props.task.priority} id={this.props.task.id} />
                             </div>
                             <EditMenu />
                         </div>

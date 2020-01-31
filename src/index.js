@@ -122,8 +122,9 @@ class App extends React.Component {
                         return <Column key={column.id} column={column} tasks={tasks} />
                     })}
                 </div>
-                
+                {/* <Footer></Footer> */}
             </DragDropContext>
+            
         )
     }
 }

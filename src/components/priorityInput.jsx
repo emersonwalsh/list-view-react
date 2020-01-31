@@ -4,8 +4,6 @@ import Rating from '@material-ui/lab/Rating';
 import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
 
-// todo change is only being refelcted in first instance... need to link to specific row 
-
 export default class PriorityInput extends React.Component {
     render() {
         const containerStyle = {
@@ -16,6 +14,7 @@ export default class PriorityInput extends React.Component {
                 <Rating
                     name="customized-empty"
                     defaultValue={this.props.priority}
+                    name={this.props.id}
                     max={3}
                     icon={<RadioButtonCheckedIcon fontSize="inherit" />}
                     emptyIcon={<RadioButtonUncheckedIcon fontSize="inherit" />}
