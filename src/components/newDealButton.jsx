@@ -35,10 +35,10 @@ const useStyles = makeStyles(theme => ({
 export default function NewDealButton() {
     const [open, setOpen] = React.useState(false);
     const classes = useStyles();
-    const [age, setAge] = React.useState('');
+    const [poc, setPoc] = React.useState('');
 
     const handleChange = event => {
-        setAge(event.target.value);
+        setPoc(event.target.value);
     };
 
   
@@ -121,7 +121,7 @@ export default function NewDealButton() {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={age}
+                            value={poc}
                             onChange={handleChange}>
                             <MenuItem value={1}>Spencer</MenuItem>
                             <MenuItem value={2}>John</MenuItem>

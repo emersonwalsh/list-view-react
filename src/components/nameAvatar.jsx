@@ -17,7 +17,7 @@ export default class NameAvatar extends React.Component {
     };
 
     return (
-      <div style={avatarContainer}>
+      <div style={avatarContainer} title={this.props.name}>
         <Avatar style={avatarStyle}>{this.props.name.charAt(0)}</Avatar>
       </div>
     );

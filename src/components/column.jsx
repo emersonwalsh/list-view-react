@@ -21,9 +21,8 @@ const TaskList = styled.div`
     flex-grow: 1;
     min-height: 40px;
     transition: background-color 0.1s ease 0s;
+    background-color: ${props => (props.isDraggingOver ? 'rgb(222, 235, 255)' : 'white')};
 `;
-// background-color: ${props => (props.isDraggingOver ? 'rgb(222, 235, 255)' : '#2684ff')};
-
 
 export default class Column extends React.Component {
     render() {
