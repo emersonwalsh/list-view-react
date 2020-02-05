@@ -6,20 +6,20 @@ export default class NameAvatar extends React.Component {
     const avatarStyle = {
       backgroundColor: '#79bb79',
       color: 'white',
-      height: '30px',
-      width: '30px',
+      height: '22px',
+      width: '22px',
       fontSize: '14px',
+      margin: '0 auto',
     };
 
     const avatarContainer = {
-      padding: '5px 0',
+      padding: '9px 0',
     };
 
     return (
       <div style={avatarContainer}>
         <Avatar style={avatarStyle}>{this.props.name.charAt(0)}</Avatar>
       </div>
-    )
-
+    );
   }
 }

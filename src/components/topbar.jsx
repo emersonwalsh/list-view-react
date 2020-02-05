@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import NewDealButton from './newDealButton.jsx';
+import ProfileButton from './profileButton.jsx';
 
 const Container = styled.div`
     position: fixed;
@@ -17,13 +18,14 @@ const Name = styled.div`
     float: left;
     line-height: 50px;
     font-size: 1.7em;
-    padding-left: 8px;
+    padding-left: 16px;
 `;
 
 export default function TopBar() {  
     return (
         <Container>
             <Name>Deal Board</Name>
+            <ProfileButton />
             <NewDealButton />
         </Container>
     );

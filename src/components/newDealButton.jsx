@@ -34,7 +34,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function NewDealButton() {
     const [open, setOpen] = React.useState(false);
-
     const classes = useStyles();
     const [age, setAge] = React.useState('');
 

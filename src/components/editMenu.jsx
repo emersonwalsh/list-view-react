@@ -9,7 +9,7 @@ const options = [
     'Delete',
 ];
 
-export default function LongMenu() {
+export default function EditMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
@@ -22,9 +22,9 @@ export default function LongMenu() {
     };
 
     const iconStyle = {
-        // borderRadius: '0px',
         padding: '8px',
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        top: '-1px'
     }
 
     return (

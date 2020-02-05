@@ -6,6 +6,7 @@ import NameAvatar from './nameAvatar.jsx';
 import PriorityInput from './priorityInput.jsx';
 import CEO from './ceo.jsx';
 import LastContact from './lastContact.jsx';
+import MaterialLink from './materialLink.jsx';
 // import NextStepsInput from './nextStepsInput.jsx';
 
 const Container = styled.div`
@@ -47,11 +48,6 @@ export default class Task extends React.Component {
             backgroundColor: 'white'
         };
 
-        const linkStyle = {
-            backgroundColor: 'white',
-            color: '#2684ff'
-        };
-
         return (
             <Draggable draggableId={this.props.task.id} index={this.props.index}>
                 {(provided, snapshot) => (
@@ -70,17 +66,17 @@ export default class Task extends React.Component {
                                 <LastContact lastContact={this.props.task.lastContact} />                            
                             </div>
                             <div style={rowItemStyle}>
-                                <NameAvatar title={this.props.task.owner} name={this.props.task.owner} />
-                            </div>
-                            <div style={rowItemStyle}>
-                                <a style={linkStyle} href="https://products.office.com/en-us/onedrive-for-business/online-cloud-storage" target="_blank">Material</a>
-                            </div>
-                            <div style={rowItemStyle}>
                                 Next Steps
                                 {/* <NextStepsInput /> */}
                             </div>
                             <div style={rowItemStyle}>
                                 <PriorityInput priority={this.props.task.priority} id={this.props.task.id} />
+                            </div>
+                            <div style={rowItemStyle}>
+                                <MaterialLink link={this.props.task.link} />
+                            </div>
+                            <div style={rowItemStyle}>
+                                <NameAvatar title={this.props.task.owner} name={this.props.task.owner} />
                             </div>
                             <EditMenu />
                         </div>

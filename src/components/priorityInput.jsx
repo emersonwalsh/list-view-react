@@ -8,7 +8,12 @@ export default class PriorityInput extends React.Component {
     render() {
         const containerStyle = {
             paddingTop: '11px'
-        }
+        };
+
+        const ratingStyle = {
+            margin: '0 auto'
+        };
+
         return (
             <Box display="flex" flexDirection="column" style={containerStyle}>
                 <Rating
@@ -16,6 +21,7 @@ export default class PriorityInput extends React.Component {
                     defaultValue={this.props.priority}
                     name={this.props.id}
                     max={3}
+                    style={ratingStyle}
                     icon={<RadioButtonCheckedIcon fontSize="inherit" />}
                     emptyIcon={<RadioButtonUncheckedIcon fontSize="inherit" />}
                     size="small"
