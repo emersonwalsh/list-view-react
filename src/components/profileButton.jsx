@@ -50,8 +50,7 @@ export default function ProfileButton() {
                     horizontal: 'right',
                 }}
                 open={open}
-                onClose={handleClose}
-                >
+                onClose={handleClose}>
                 <MenuItem onClick={handleClose}>My Settings</MenuItem>
                 <MenuItem onClick={handleClose}>Log Out</MenuItem>
             </Menu>

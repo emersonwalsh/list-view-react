@@ -20,7 +20,8 @@ const TaskList = styled.div`
     padding: 8px 8px 0 8px;
     flex-grow: 1;
     min-height: 40px;
-    transition: background-color 0.1s ease 0s;
+    transition: background-color 0.2s ease 0s;
+    border-radius: 4px;
     background-color: ${props => (props.isDraggingOver ? 'rgb(222, 235, 255)' : 'white')};
 `;
 
