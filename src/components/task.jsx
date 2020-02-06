@@ -67,7 +67,7 @@ export default class Task extends React.Component {
                             </div>
                             <div style={rowItemStyle}>
                                 {/* Next Steps */}
-                                <NextStepsInput />
+                                <NextStepsInput nextStep={this.props.task.nextStep} />
                             </div>
                             <div style={rowItemStyle}>
                                 <PriorityInput priority={this.props.task.priority} id={this.props.task.id} />

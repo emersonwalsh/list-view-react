@@ -9,7 +9,7 @@ export default class NextStepsInput extends React.Component {
             paddingTop: '12px',
         }
         return (
-            <TextField style={containerStyle} label="" id="standard-size-small"  placeholder="Next Steps" size="small" />
+            <TextField style={containerStyle} label="" id="standard-size-small"  placeholder="Next Steps" size="small" value={this.props.nextStep} />
         );
     }
 }
