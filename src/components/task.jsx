@@ -7,7 +7,7 @@ import PriorityInput from './priorityInput.jsx';
 import CEO from './ceo.jsx';
 import LastContact from './lastContact.jsx';
 import MaterialLink from './materialLink.jsx';
-// import NextStepsInput from './nextStepsInput.jsx';
+import NextStepsInput from './nextStepsInput.jsx';
 
 const Container = styled.div`
     border: ${props => (props.isDragging ? '1px solid #ecebeb' : '1px solid #ecebeb')};
@@ -40,7 +40,7 @@ export default class Task extends React.Component {
             width: '15%',
             textOverflow: 'ellipsis',
             overflow: 'hidden',
-            backgroundColor: 'white'
+            // backgroundColor: 'white'
         };
 
         const rowItemButtonIconStyle = {
@@ -66,8 +66,8 @@ export default class Task extends React.Component {
                                 <LastContact lastContact={this.props.task.lastContact} />                            
                             </div>
                             <div style={rowItemStyle}>
-                                Next Steps
-                                {/* <NextStepsInput /> */}
+                                {/* Next Steps */}
+                                <NextStepsInput />
                             </div>
                             <div style={rowItemStyle}>
                                 <PriorityInput priority={this.props.task.priority} id={this.props.task.id} />

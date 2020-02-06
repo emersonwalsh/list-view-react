@@ -22,7 +22,7 @@ export default function EditMenu() {
     };
 
     const iconStyle = {
-        padding: '8px',
+        padding: '6px',
         backgroundColor: 'white',
         top: '-1px'
     }

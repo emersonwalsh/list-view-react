@@ -1,22 +1,15 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
-// todo change is only being refelcted in first instance... need to link to specific row 
-// todo use different symbols other than stars
+// todo change font size to be 14px
 
 export default class NextStepsInput extends React.Component {
     render() {
         const containerStyle = {
-            paddingTop: '11px'
+            paddingTop: '12px',
         }
         return (
-            <TextField
-                id="standard-textarea"
-                label="Next Steps"
-                placeholder="Placeholder"
-                variant="outlined"
-                // multiline
-            />
+            <TextField style={containerStyle} label="" id="standard-size-small"  placeholder="Next Steps" size="small" />
         );
     }
 }
